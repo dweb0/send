@@ -36,24 +36,15 @@ function password(state) {
         type="password"
         value="lol"
       />
-      <div class="checkbox inline-block mr-3">
-        <input
-          id="add-password"
-          type="checkbox"
-          ${state.archive.password ? 'checked' : ''}
-          autocomplete="off"
-          onchange="${togglePasswordInput}"
-        />
+      <div class="inline-block mr-3">
         <label for="add-password">
-          ${state.translate('addPassword')}
+          Password to upload
         </label>
       </div>
       <div class="relative inline-block my-1">
         <input
           id="password-input"
-          class="${state.archive.password
-            ? ''
-            : 'invisible'} border-default rounded-default focus:border-primary leading-normal my-1 py-1 px-2 h-8 dark:bg-grey-80"
+          class="border-default rounded-default focus:border-primary leading-normal my-1 py-1 px-2 h-8 dark:bg-grey-80"
           autocomplete="off"
           maxlength="${MAX_LENGTH}"
           type="password"
